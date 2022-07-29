@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Material(
         color: Colors.black,
+        child: Text("hi guys"),
       ),
     );
   }
