@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:my_radio/pages/home_page.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(statusBarColor: Colors.transparent));
   runApp(MyApp());
 }
 
@@ -11,12 +16,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "MyRadio",
-      theme: ThemeData(),
+      theme: ThemeData(fontFamily: GoogleFonts.poppins().fontFamily),
       debugShowCheckedModeBanner: false,
-      home: Material(
-        color: Colors.black,
-        child: Text("hi guys"),
-      ),
+      home: const HomePage(),
     );
   }
 }
